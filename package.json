@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Plataforma de mapeamento de fluxo de valor e gerenciador de ações",
   "scripts": {
-    "build": "echo 'Build configurado' && mkdir -p dist && cp -r * dist/ 2>/dev/null || true",
+    "build": "echo 'Build configurado' && mkdir -p dist && find . -maxdepth 1 -type f ! -name '.*' -exec cp {} dist/ \\;",
     "dev": "echo 'Desenvolvimento'"
   }
 }
