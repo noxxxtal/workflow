@@ -29,10 +29,10 @@ jobs:
 
       - name: Run build
         run: |
-          if [ -f package.json ] && npm run build --if-present; then
-            echo "Build completed successfully"
+          if [ -f package.json ]; then
+            npm run build --if-present
           else
-            echo "No build script found or build not needed"
+            echo "No package.json found, skipping build"
           fi
 
   test:
@@ -58,8 +58,8 @@ jobs:
 
       - name: Run tests
         run: |
-          if [ -f package.json ] && npm test --if-present; then
-            echo "Tests completed successfully"
+          if [ -f package.json ]; then
+            npm test --if-present
           else
-            echo "No test script found or tests not needed"
+            echo "No package.json found, skipping tests"
           fi

@@ -33,12 +33,12 @@ jobs:
       - name: Build project
         run: |
           if [ -f package.json ]; then
-            npm run build || echo "Build script not found, creating dist directory"
-          fi
-          mkdir -p dist
-          if [ ! "$(ls -A dist)" ]; then
-            echo "Copying files to dist"
-            find . -maxdepth 1 -type f ! -name '.*' -exec cp {} dist/ \;
+            npm run build --if-present
+            mkdir -p dist
+          else
+            echo "No package.json found, skipping build"
+            mkdir -p dist
+            cp README.md dist/ 2>/dev/null || true
           fi
 
       - name: Deploy status
