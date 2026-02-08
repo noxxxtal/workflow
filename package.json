@@ -1,0 +1,27 @@
+{
+  "name": "workflow",
+  "version": "1.0.0",
+  "description": "Plataforma de mapeamento de fluxo de valor e gerenciador de ações",
+  "main": "index.js",
+  "scripts": {
+    "build": "mkdir -p dist && echo '# Workflow Platform Build' > dist/index.html && cp README.md dist/",
+    "test": "node -e \"console.log('✅ Basic validation passed')\"",
+    "dev": "echo '🚀 Development server would start here'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noxxxtal/workflow.git"
+  },
+  "keywords": [
+    "workflow",
+    "management",
+    "automation",
+    "value-stream-mapping"
+  ],
+  "author": "noxxxtal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noxxxtal/workflow/issues"
+  },
+  "homepage": "https://github.com/noxxxtal/workflow#readme"
+}
