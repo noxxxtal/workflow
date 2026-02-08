@@ -34,7 +34,7 @@ jobs:
           if [ -f package.json ]; then
             npm run build --if-present
           else
-            echo "No package.json found, skipping build"
+            echo "No build script found or build not needed"
           fi
 
   test:
